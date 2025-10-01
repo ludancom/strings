@@ -75,6 +75,7 @@ int Str_compare(const char* str1, const char* str2){
         {
             if(*str == *first_of_strInside){
                 strAtStart = str;
+                strInside = first_of_strInside;
                 while(*strInside != '\0'){
                     if(*strAtStart != *strInside){
                         break;
