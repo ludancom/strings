@@ -30,7 +30,7 @@ static size_t replaceAndWrite(const char *pcLine,
    assert(pcFrom != NULL);
    assert(pcTo != NULL);
    
-   if(*pcLine == '\0'){
+   if(*pcFrom == '\0'){
       printf("%s", pcLine);
       return 0;
    }
@@ -38,7 +38,7 @@ static size_t replaceAndWrite(const char *pcLine,
    pInString = Str_search(pcLineA, pcFrom);
    while(pInString != NULL){
       while(pcLineA != pInString){ /*write leading up to pInString*/
-         printf("%s", pcLineA);
+         printf("%c", pcLineA);
          pcLineA++;
 
       }
