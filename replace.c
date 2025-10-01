@@ -25,27 +25,31 @@ static size_t replaceAndWrite(const char *pcLine,
    const char* pInString;
    const char* pcLineA = pcLine;
    size_t num_replacements = 0;
-   size_t size_pcFrom = Str_getLength(pcFrom);
+   size_t size_pcFrom;
    
    assert(pcLine != NULL);
    assert(pcFrom != NULL);
    assert(pcTo != NULL);
+
    
    if(*pcFrom == '\0'){
       printf("%s", pcLine);
       return 0;
    }
-
+   
+   size_pcFrom = Str_getLength(pcFrom);
    pInString = Str_search(pcLineA, pcFrom);
+
    while(pInString != NULL){
-      while(pcLineA != pInString){ /*write leading up to pInString*/
+      while(pcLineA < pInString){ /*write leading up to pInString*/
          putchar(*pcLineA);
          ++pcLineA;
 
       }
       printf("%s", pcTo);
-      num_replacements++;
-      pcLineA = pcLineA + size_pcFrom;
+      ++num_replacements;
+
+      pcLineA = pInString + size_pcFrom;
       pInString = Str_search(pcLineA, pcFrom);
  
    }
