@@ -25,6 +25,7 @@ static size_t replaceAndWrite(const char *pcLine,
    const char* pInString;
    const char* pcLineA = pcLine;
    size_t num_replacements = 0;
+   size_t size_pcFrom = Str_getLength(pcFrom);
    
    assert(pcLine != NULL);
    assert(pcFrom != NULL);
@@ -44,7 +45,7 @@ static size_t replaceAndWrite(const char *pcLine,
       }
       printf("%s", pcTo);
       num_replacements++;
-      pcLineA = pInString + Str_getLength(pcFrom);
+      pcLineA = pInString + size_pcFrom;
       pInString = Str_search(pcLineA, pcFrom);
       
  
