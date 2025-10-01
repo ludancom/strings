@@ -77,6 +77,7 @@ char* Str_search(const char str[], const char strInside[]){
                 if(strInside[k] != str[i+k]){
                     break;
                 }
+                k++;
             }
             if(strInside[k]=='\0'){
                 return (char*) &str[i];
