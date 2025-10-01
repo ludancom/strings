@@ -27,10 +27,11 @@ char* Str_copy(char destination[], const char strIn[])
 char* Str_concat(char destination[], const char strIn[])
 {
     int i = 0;
+    int dest_length = Str_getLength(destination);
     assert(destination != NULL);
     assert(strIn != NULL);
     while(strIn[i] != '\0'){
-        destination[Str_getLength(destination)+i] = strIn[i];
+        destination[dest_length+i] = strIn[i];
         i++;
     }
     destination[Str_getLength(destination)+i] = '\0';
