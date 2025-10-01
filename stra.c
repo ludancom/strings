@@ -1,8 +1,9 @@
+/*the array based implementation of c string functions*/
 #include <stdlib.h>
 #include "str.h"
 #include <assert.h>
 
-/*returns the length of a sting*/
+/*takes in a string variable strIn, returns the length of a sting*/
 size_t Str_getLength(const char strIn[])
 {
    size_t uLength = 0;
@@ -12,7 +13,7 @@ size_t Str_getLength(const char strIn[])
    return uLength;
 }
 
-/*copies the given string into a string destination*/
+/*copies the given string, StrIn into a string destination and returns that destination*/
 char* Str_copy(char destination[], const char strIn[])
 {
     int i = 0;
@@ -27,7 +28,7 @@ char* Str_copy(char destination[], const char strIn[])
 }
 
 
-/*adds one string to the end of another*/
+/*adds string strIn to string destination and returns destination*/
 char* Str_concat(char destination[], const char strIn[])
 {
     int i = 0;
@@ -42,7 +43,7 @@ char* Str_concat(char destination[], const char strIn[])
     return (char*)destination;
 }
 
-/*compares two strings character by character. If str1 is larger than str2, returns >0
+/*compares two strings, str1 and str2 character by character. If str1 is larger than str2, returns >0
 if str2>str1, returns <0. Otherwise returns 0*/
 int Str_compare(const char* str1, const char* str2){
     int i = 0;
@@ -65,7 +66,7 @@ int Str_compare(const char* str1, const char* str2){
     return 0;
 }
 
-/*searchings for instances of a substring within another string and returns the first instance found*/
+/*searchings for instances of a substring strInside within another string str and returns the first instance found*/
 char* Str_search(const char str[], const char strInside[]){
     size_t k = 0;
     size_t i = 0;
