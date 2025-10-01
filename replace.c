@@ -50,11 +50,8 @@ static size_t replaceAndWrite(const char *pcLine,
  
    }
 
-   while(*pcLineA != '\0'){ /*write everything after the last instance of pcTo*/
-         putchar(*pcLineA);
-         pcLineA++;
-
-      }
+   /*write everything after the last instance of pcTo*/
+   print("%s", pcLineA);
 
    return num_replacements;
 
