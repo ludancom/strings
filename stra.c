@@ -71,7 +71,7 @@ char* Str_search(const char str[], const char strInside[]){
     }
 
     for(i = 0; str[i] != '\0'; i++){
-        if(str[i] == strInside[0]){
+        if(str[i] == strInside[0] && str[i+k] != '\0'){
             k=0;
             while(strInside[k]!='\0'){
                 if(strInside[k] != str[i+k]){
