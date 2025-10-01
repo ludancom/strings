@@ -5,7 +5,7 @@
 #define STR_INCLUDED
 
 /*--------------------------------------------------------------------*/
-/* takes a null-terminated string and return the length of the string */
+/* takes a null-terminated string strIn and return the length of the string */
 
 size_t Str_getLength(const char* strIn);
 
