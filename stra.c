@@ -31,7 +31,7 @@ char* Str_copy(char destination[], const char strIn[])
 char* Str_concat(char destination[], const char strIn[])
 {
     int i = 0;
-    int dest_length = Str_getLength(destination);
+    size_t dest_length = Str_getLength(destination);
     assert(destination != NULL);
     assert(strIn != NULL);
     while(strIn[i] != '\0'){
@@ -55,7 +55,7 @@ int Str_compare(const char* str1, const char* str2){
             return 1;
         }
         else if(str1[i] != str2[i]){
-            return str1[i]-str2[i];
+            return (int)(str1[i]-str2[i]);
         }
         i++;
     }
