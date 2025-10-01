@@ -51,7 +51,7 @@ static size_t replaceAndWrite(const char *pcLine,
    }
 
    /*write everything after the last instance of pcTo*/
-   print("%s", pcLineA);
+   printf("%s", pcLineA);
 
    return num_replacements;
 
