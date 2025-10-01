@@ -68,9 +68,14 @@ int Str_compare(const char* str1, const char* str2){
         const char* strAtStart;
         assert(str != NULL);
         assert(strInside != NULL);
+
         if(Str_getLength(strInside)>Str_getLength(str)){
             return NULL;
         }
+        if(*strInside == '\0'){
+            return str;
+        }
+
         while(*str != '\0')
         {
             if(*str == *first_of_strInside){

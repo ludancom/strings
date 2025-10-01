@@ -34,7 +34,7 @@ int Str_compare(const char* str1, const char* str2);
 
 /*--------------------------------------------------------------------*/
 /* returns the first occurance of a substring of str2 within string 1.
-returns null if no match is found. */
+returns null if no match is found. If the substring string is empty, return the original string*/
 
 char* Str_search(const char* str, const char* strInside);
 
