@@ -60,8 +60,8 @@ int Str_compare(const char* str1, const char* str2){
 }
 
 char* Str_search(const char str[], const char strInside[]){
-    int k = 0;
-    int i = 0;
+    size_t k = 0;
+    size_t i = 0;
     assert(str != NULL);
     assert(strInside != NULL);
     
