@@ -63,7 +63,7 @@ int Str_compare(const char* str1, const char* str2){
     return 0;
 }
 
-    char* Str_search(const char* str, const char* strInside){
+char* Str_search(const char* str, const char* strInside){
         const char* first_of_strInside = strInside;
         const char* strAtStart;
         assert(str != NULL);
@@ -99,5 +99,5 @@ int Str_compare(const char* str1, const char* str2){
         }
         return NULL;
 
-    }
+}
 
