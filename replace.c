@@ -40,14 +40,13 @@ static size_t replaceAndWrite(const char *pcLine,
    while(pInString != NULL){
       while(pcLineA != pInString){ /*write leading up to pInString*/
          putchar(*pcLineA);
-         pcLineA++;
+         ++pcLineA;
 
       }
       printf("%s", pcTo);
       num_replacements++;
-      pcLineA = pInString + size_pcFrom;
+      pcLineA = pcLineA + size_pcFrom;
       pInString = Str_search(pcLineA, pcFrom);
-      
  
    }
 
