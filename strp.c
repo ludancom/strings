@@ -1,8 +1,10 @@
+/*the pointer based implementation of c string functions*/
 #include <stdlib.h>
 #include "str.h"
 #include <assert.h>
 
-/*returns the length of a sting*/
+
+/*takes in a string variable strIn, returns the length of a sting*/
 size_t Str_getLength(const char *strIn)
 {
    const char *pcEnd;

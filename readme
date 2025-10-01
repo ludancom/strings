@@ -11,7 +11,10 @@ assignment? COPY THE LIST of authorized sources of information given
 in the "Policies" web page (also available on armlab in the file
 ~cos217/AuthorizedSourcesList ) to this section of the readme file,
 and edit it as appropriate.
-
+-lecture slides
+-precept packets and materials
+-asked my preceptor questions during precept
+- other student's ed discussion questions and answers
 
 
 ------------------------------------------------------------------------
@@ -63,7 +66,7 @@ What warnings does splint generate on stra.c, and what are your
 disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
-
+None.
 
 
 ------------------------------------------------------------------------
@@ -71,7 +74,9 @@ What warnings does critTer generate on stra.c, and what are your
 disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
-
+stra.c: line 85: low priority: 
+   This area is deeply nested at level 4, consider refactoring
+   -it is a correct and not too slow implementation of the function.
 
 
 ------------------------------------------------------------------------
@@ -79,7 +84,7 @@ What warnings does splint generate on strp.c, and what are your
 disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
-
+None.
 
 
 ------------------------------------------------------------------------
@@ -87,7 +92,9 @@ What warnings does critTer generate on strp.c, and what are your
 disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
-
+strp.c: line 90: low priority: 
+   This area is deeply nested at level 4, consider refactoring
+   - it is a correct and not too slow implementation of the function.
 
 
 ------------------------------------------------------------------------
@@ -103,14 +110,15 @@ What warnings does critTer generate on replace.c, and what are your
 disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
-
-
+None
 
 ------------------------------------------------------------------------
 Is it possible for Str_copy or Str_concat to call assert to verify
 that the destination memory area specified by the caller is large
 enough? Explain.
-
-
+No, it is not possible for Str_copy or Str_concat to verify that the
+destination memory is sufficient because the only thing we pass to
+those functions is a pointer to a memory address, and not the amount
+of memory that is avaliable to us.
 
 ------------------------------------------------------------------------
