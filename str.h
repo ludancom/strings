@@ -1,3 +1,4 @@
+/*.h file for string functions in c*/
 #include <stddef.h>
 
 #ifndef STR_INCLUDED
@@ -10,7 +11,7 @@ size_t Str_getLength(const char* strIn);
 
 /*--------------------------------------------------------------------*/
 /* takes in a char pointer to a destination for the final string, as 
-well as a char pointer to a null-terminated string. it copies that string
+well as a char pointer to a null-terminated string strIn. it copies that string
 to the destination and returns the copied string. Doesnt have to perform
 bound checking for implementation using array */
 
@@ -18,7 +19,7 @@ char* Str_copy(char* destination, const char* strIn);
 
 /*--------------------------------------------------------------------*/
 /*  concatenates the destination string and the strIn string, then stores
-the result in the destination string */
+the result in the destination string and returns destination */
 
 char* Str_concat(char* destination, const char* strIn);
 
@@ -33,7 +34,7 @@ is considered larger*/
 int Str_compare(const char* str1, const char* str2);
 
 /*--------------------------------------------------------------------*/
-/* returns the first occurance of a substring of str2 within string 1.
+/* returns the first occurance of a substring of strInside within string 1.
 returns null if no match is found. If the substring string is empty, return 
 the original string*/
 
