@@ -22,8 +22,9 @@ char* Str_copy(char* destination, const char* strIn)
         strIn++;
         destination++;
     }
-    return original_destination;
     *destination = '\0';
+    return original_destination;
+    
 
 }
 
