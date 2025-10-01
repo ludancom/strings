@@ -44,8 +44,9 @@ static size_t replaceAndWrite(const char *pcLine,
       }
       printf("%s", pcTo);
       num_replacements++;
-      pInString = Str_search(pcLineA, pcFrom);
       pcLineA = pInString + Str_getLength(pcFrom);
+      pInString = Str_search(pcLineA, pcFrom);
+      
  
    }
 
