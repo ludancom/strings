@@ -14,9 +14,9 @@ size_t Str_getLength(const char *strIn)
 
 char* Str_copy(char* destination, const char* strIn)
 {
+    char* original_destination = destination; /*stores the original destination to not lose it when incrementing*/
     assert(destination != NULL);
     assert(strIn != NULL);
-    char* original_destination = destination; /*stores the original destination to not lose it when incrementing*/
     while(*strIn != '\0'){
         *destination = *strIn;
         strIn++;
@@ -29,10 +29,10 @@ char* Str_copy(char* destination, const char* strIn)
 
 char* Str_concat(char* destination, const char* strIn)
 {
-    assert(destination != NULL);
-    assert(strIn != NULL);
     char* orig_dest = destination;
     char* end_of_dest = destination+Str_getLength(destination); /*end_of_dest is the pointer to the end of the destination character*/
+    assert(destination != NULL);
+    assert(strIn != NULL);
     while(*strIn != 0){
         *end_of_dest = *strIn;
         end_of_dest++;
@@ -63,16 +63,17 @@ int Str_compare(const char* str1, const char* str2){
 }
 
     char* Str_search(const char* str, const char* strInside){
+        char* first_of_strInside = strInside;
+        char* strAtStart;
         assert(str != NULL);
         assert(strInside != NULL);
         if(Str_getLength(strInside)>Str_getLength(str)){
             return NULL;
         }
-        char* first_of_strInside = strInside;
         while(*str != '\0')
         {
             if(*str == *first_of_strInside){
-                char* strAtStart = str;
+                strAtStart = str;
                 while(*strInside != '\0'){
                     if(*strAtStart != *strInside){
                         break;
