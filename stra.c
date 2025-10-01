@@ -61,7 +61,6 @@ int Str_compare(const char* str1, const char* str2){
 char* Str_search(const char str[], const char strInside[]){
     int k = 0;
     int i = 0;
-    char* a;
     assert(str != NULL);
     assert(strInside != NULL);
     
@@ -79,8 +78,7 @@ char* Str_search(const char str[], const char strInside[]){
                 }
             }
             if(strInside[k]=='\0'){
-                a = str[i+k];
-                return a;
+                return (char*) str[i+k];
             }
         }
     }
