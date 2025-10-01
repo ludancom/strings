@@ -63,8 +63,8 @@ int Str_compare(const char* str1, const char* str2){
 }
 
     char* Str_search(const char* str, const char* strInside){
-        char* first_of_strInside = strInside;
-        char* strAtStart;
+        const char* first_of_strInside = strInside;
+        const char* strAtStart;
         assert(str != NULL);
         assert(strInside != NULL);
         if(Str_getLength(strInside)>Str_getLength(str)){
