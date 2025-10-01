@@ -33,7 +33,7 @@ static size_t replaceAndWrite(const char *pcLine,
 
    
    if(*pcFrom == '\0'){
-      fputs(pcLine, stdout);
+      printf("%s", pcLine);
       return 0;
    }
    
@@ -46,7 +46,7 @@ static size_t replaceAndWrite(const char *pcLine,
          ++pcLineA;
 
       }
-      fputs(pcTo, stdout);
+      printf("%s", pcTo);
       ++num_replacements;
 
       pcLineA = pInString + size_pcFrom;
@@ -55,10 +55,7 @@ static size_t replaceAndWrite(const char *pcLine,
    }
 
    /*write everything after the last instance of pcTo*/
-   while (*pcLineA != '\0') {
-        putchar(*pcLineA);
-        ++pcLineA;
-    }
+   printf("%s", pcLineA);
 
    return num_replacements;
 

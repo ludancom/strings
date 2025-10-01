@@ -2,6 +2,7 @@
 #include "str.h"
 #include <assert.h>
 
+/*returns the length of a sting*/
 size_t Str_getLength(const char *strIn)
 {
    const char *pcEnd;
@@ -12,6 +13,7 @@ size_t Str_getLength(const char *strIn)
    return (size_t)(pcEnd - strIn);
 }
 
+/*copies the given string into a string destination*/
 char* Str_copy(char* destination, const char* strIn)
 {
     char* original_destination = destination; /*stores the original destination to not lose it when incrementing*/
@@ -27,7 +29,7 @@ char* Str_copy(char* destination, const char* strIn)
     
 
 }
-
+/*adds one string to the end of another*/
 char* Str_concat(char* destination, const char* strIn)
 {
     char* orig_dest = destination;
@@ -43,6 +45,8 @@ char* Str_concat(char* destination, const char* strIn)
     return orig_dest;
 }
 
+/*compares two strings character by character. If str1 is larger than str2, returns >0
+if str2>str1, returns <0. Otherwise returns 0*/
 int Str_compare(const char* str1, const char* str2){
     assert(str1 != NULL);
     assert(str2 != NULL);
@@ -63,6 +67,7 @@ int Str_compare(const char* str1, const char* str2){
     return 0;
 }
 
+/*searchings for instances of a substring within another string and returns the first instance found*/
 char* Str_search(const char* str, const char* strInside){
         const char* first_of_strInside = strInside;
         const char* strAtStart;
